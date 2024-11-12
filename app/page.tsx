@@ -4,8 +4,7 @@ import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { config } from "@/lib/config";
-import { Github, Discord, Youtube, Brush } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"; // Button bileşeni aktif durumda
 
 export default function Home() {
   const controls = useAnimation();
@@ -42,7 +41,7 @@ export default function Home() {
           >
             <img
               src={config.discord.avatar}
-              alt={config.personal.name}
+              alt="Avatar"
               className="w-full h-full object-cover"
             />
           </motion.div>
@@ -89,35 +88,31 @@ export default function Home() {
           <h2 className="text-2xl font-bold mb-6">Contact</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <Button
-              variant="outline"
+              as="a"
+              href={`https://github.com/${config.social.github}`}
               className="group hover:scale-105 transition-all hover:bg-gray-800/50"
-              onClick={() => window.open(`https://github.com/${config.social.github}`)}
             >
-              <Github className="mr-2 group-hover:text-cyan-400" />
               Github
             </Button>
             <Button
-              variant="outline"
+              as="a"
+              href={`https://discord.com/users/${config.discord.id}`}
               className="group hover:scale-105 transition-all hover:bg-gray-800/50"
-              onClick={() => window.open(`https://discord.com/users/${config.discord.id}`)}
             >
-              <Discord className="mr-2 group-hover:text-cyan-400" />
               Discord
             </Button>
             <Button
-              variant="outline"
+              as="a"
+              href={`https://youtube.com/${config.social.youtube}`}
               className="group hover:scale-105 transition-all hover:bg-gray-800/50"
-              onClick={() => window.open(`https://youtube.com/@${config.social.youtube}`)}
             >
-              <Youtube className="mr-2 group-hover:text-cyan-400" />
               Youtube
             </Button>
             <Button
-              variant="outline"
+              as="a"
+              href={`https://deviantart.com/${config.social.deviantart}`}
               className="group hover:scale-105 transition-all hover:bg-gray-800/50"
-              onClick={() => window.open(`https://deviantart.com/${config.social.deviantart}`)}
             >
-              <Brush className="mr-2 group-hover:text-cyan-400" />
               Deviantart
             </Button>
           </div>
