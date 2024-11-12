@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -63,7 +65,20 @@ export default function Home() {
       forks: 5,
       url: "https://github.com/username/project1"
     },
-    // Add more repos as needed
+    {
+      name: "Project 2",
+      description: "Description of project 2",
+      stars: 15,
+      forks: 8,
+      url: "https://github.com/username/project2"
+    },
+    {
+      name: "Project 3",
+      description: "Description of project 3",
+      stars: 20,
+      forks: 12,
+      url: "https://github.com/username/project3"
+    }
   ];
 
   // Example featured projects
@@ -74,7 +89,18 @@ export default function Home() {
       footer: "React • TypeScript • Tailwind",
       link: "https://project1.com"
     },
-    // Add more projects as needed
+    {
+      title: "Featured Project 2",
+      description: "Description of featured project 2",
+      footer: "Next.js • Node.js • MongoDB",
+      link: "https://project2.com"
+    },
+    {
+      title: "Featured Project 3",
+      description: "Description of featured project 3",
+      footer: "Vue.js • Express • PostgreSQL",
+      link: "https://project3.com"
+    }
   ];
 
   return (
@@ -240,4 +266,4 @@ export default function Home() {
       </div>
     </main>
   );
-          }
+      }
